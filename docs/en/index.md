@@ -8,7 +8,7 @@ This extension is here to provide [GP WebPay](http://www.gpwebpay.cz) system for
 The best way to install Pixidos/GPWebPay is using  [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require pixidos/gpwebpay
+$ composer require janharsa/gpwebpay
 ```
 
 and you can enable the extension using your neon config
