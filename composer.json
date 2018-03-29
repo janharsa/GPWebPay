@@ -1,5 +1,5 @@
 {
-  "name": "pixidos/gpwebpay",
+  "name": "janharsa/gpwebpay",
   "type": "library",
   "description": "GP WepPay integration for Nette Framework",
   "keywords": ["nette", "gp", "gp webpay","webpay", "pay", "checkout", "payment"],
@@ -13,35 +13,26 @@
     {
       "name": "Ondra Votava",
       "email": "ondra.votava@pixidos.com"
+    },
+    {
+      "name": "Jan Harsa",
+      "email": "jan.harsa@haxo.cz"
     }
   ],
   "support": {
-    "email": "dev@pixidos.com",
-    "issues": "https://github.com/Pixidos/GPWebPay/issues"
+    "email": "jan.harsa@haxo.cz",
+    "issues": "https://github.com/janharsa/GPWebPay/issues"
   },
   "require": {
     "php": ">=7.1.0",
     "ext-openssl": "*",
-    "nette/di": "^2.3",
-    "nette/application": "^2.3",
-    "nette/utils": "^2.3"
+    "nette/di": "^2.4",
+    "nette/application": "^2.4",
+    "nette/utils": "^2.4"
   },
   "require-dev": {
-
-    "nette/bootstrap": "^2.3",
-    "nette/caching": "^2.3",
-    "nette/database": "^2.3",
-    "nette/php-generator": "^2.3",
-    "nette/finder": "^2.3",
-    "nette/forms": "^2.3",
-    "nette/http": "^2.3",
-    "nette/mail": "^2.3",
-    "nette/robot-loader": "^2.3",
-    "nette/safe-stream": "^2.3",
-    "nette/security": "^2.3",
-    "latte/latte": "^2.3",
-    "tracy/tracy": "^2.3",
-    "nette/tester": "^1.4"
+    "nette/nette": "^2.4",
+    "nette/tester": "^2.0"
   },
   "minimum-stability": "stable",
   
