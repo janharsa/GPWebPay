@@ -11,7 +11,6 @@ Requirements
 
 janharsa/GPWebPay 3.0 requires PHP 7.1 or higher. For PHP 5.6 use version 2.2.0
 
-
 - [nette/di](https://github.com/nette/di)
 - [nette/application](https://github.com/nette/application)
 - [nette/utils](https://github.com/nette/utils)

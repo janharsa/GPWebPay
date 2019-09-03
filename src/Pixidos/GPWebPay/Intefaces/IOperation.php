@@ -117,7 +117,14 @@ interface IOperation
     public function getPayMethod(): ?string;
     
     /**
-     * @param string $payMethod supported val: CRD – payment card | MCM – MasterCard Mobile | MPS – MasterPass | BTNCS - PLATBA 24
+     * Supported Values:
+     * CRD – payment card
+     * MCM – MasterCard Mobile
+     * MPS – MasterPass
+     * BTNCS - PLATBA 24
+     * GPAY - Google Pay
+     *
+     * @param string $payMethod supported val: CRD, MCM, MPS, BTNCS, GPAY
      *
      * @return IOperation
      */
@@ -134,8 +141,9 @@ interface IOperation
      * MCM – MasterCard Mobile
      * MPS – MasterPass
      * BTNCS - PLATBA 24
+     * GPAY - Google Pay
      *
-     * @param string $disablePayMethod supported val: CRD, MCM, MPS, BTNCS
+     * @param string $disablePayMethod supported val: CRD, MCM, MPS, BTNCS, GPAY
      *
      * @return IOperation
      */
@@ -153,8 +161,9 @@ interface IOperation
      * MCM – MasterCard Mobile
      * MPS – MasterPass
      * BTNCS - PLATBA 24
+     * GPAY - Google Pay
      *
-     * @param array $payMethods supported val: [CRD, MCM, MPS, BTNCS]
+     * @param array $payMethods supported val: [CRD, MCM, MPS, BTNCS, GPAY]
      *
      * @return IOperation
      */
@@ -189,17 +198,17 @@ interface IOperation
      *
      * @return IOperation
      */
-    public function setReferenceNumber(string $referenceNumber):IOperation;
+    public function setReferenceNumber(string $referenceNumber): IOperation;
     
     /**
-     * @return mixed
+     * @return int|float|string
      */
     public function getFastPayId();
     
     /**
-     * @param mixed $fastPayId max. lenght is 15 and can contain only numbers without 0 on first position
+     * @param int|float|string $fastPayId max. lenght is 15 and can contain only numbers without 0 on first position
      *
      * @return IOperation
      */
-    public function setFastPayId($fastPayId);
+    public function setFastPayId($fastPayId): IOperation;
 }
