@@ -61,7 +61,7 @@ class GPWebPayExtension extends Nette\DI\CompilerExtension
         
         $gatewayKey = $config[self::GATEWAY_KEY];
         $builder->addDefinition($this->prefix('settings'))
-                ->setClass(
+                ->setFactory(
                     Settings::class, [
                         self::PRIVATE_KEY => $this->getArray(self::PRIVATE_KEY, $config, $gatewayKey),
                         self::PRIVATE_KEY_PASSWORD => $this->getArray(self::PRIVATE_KEY_PASSWORD, $config, $gatewayKey),
@@ -78,7 +78,7 @@ class GPWebPayExtension extends Nette\DI\CompilerExtension
                 ->setFactory(SignerFactory::class, [$this->prefix('@settings')]);
         
         $builder->addDefinition($this->prefix('provider'))
-                ->setClass(
+                ->setFactory(
                     Provider::class,
                     [
                         $this->prefix('@settings'),
@@ -87,7 +87,7 @@ class GPWebPayExtension extends Nette\DI\CompilerExtension
                 );
         
         $builder->addDefinition($this->prefix('controlFactory'))
-                ->setClass(GPWebPayControlFactory::class, [$this->prefix('@provider')]);
+                ->setFactory(GPWebPayControlFactory::class, [$this->prefix('@provider')]);
         
     }
     
